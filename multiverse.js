@@ -88,6 +88,10 @@ function multiverse_render(multiverse, ctxt, w, h) {
         ctxt.translate(min * (UNIVERSE_WIDTH + 1) + (rep % 3) * (UNIVERSE_WIDTH + 1) * 9, max * (UNIVERSE_HEIGHT + 1) + Math.floor(rep / 3) * (UNIVERSE_HEIGHT + 1) * 9);
         ctxt.fillStyle = 'hsla('+ Math.floor(rep * 255 / 8) + ',' + Math.floor(min * 100 / 8) + '%,' + Math.floor(max * 100 / 8) + '%, 0.2)';
         ctxt.fillRect(0, 0, UNIVERSE_WIDTH, UNIVERSE_HEIGHT);
+        if (min == 2 && max == 3 && rep == 3) {
+          ctxt.strokeStyle = '#white'
+          ctxt.strokeRect(-0.5, -0.5, UNIVERSE_WIDTH + 1, UNIVERSE_HEIGHT + 1);
+        }
         ctxt.fillStyle = 'hsla('+ Math.floor(rep * 255 / 8) + ',' + Math.floor(min * 100 / 8) + '%,' + Math.floor(max * 100 / 8) + '%, 1)';
         universe_render(universe, ctxt);
         ctxt.restore();
