@@ -10,14 +10,29 @@
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
   }
+  a {
+    color: #27e;
+  }
+  .wrap {
+    position: relative;
+  }
   #display {
     background: white;
+  }
+  #you {
+    position: absolute;
+    left: 140px;
+    top: 387px; 
+    -webkit-transform: rotate(-30deg);
   }
   </style>
 </head>
 <body>
   <h1>Conway's Game of Life Multiverse</h1>
-  <canvas id="display"></canvas>
+  <div class="wrap">
+    <div id="you">← You Are Here</div>
+    <canvas id="display"></canvas>
+  </div>
   <script src="multiverse.js"></script>
 </body>
 </html>
